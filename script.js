@@ -30,3 +30,19 @@ function printForcast({ zodiac, fortune, advice }) {
   console.log(`You are ${fortune}`);
   console.log(`You need to ${advice}`);
 }
+
+function dailyForcast() {
+  let indexHoroscope = randSelect(data.horoscope.length);
+  let indexFortune = randSelect(data.todayFortune.length);
+  let indexAdvice1 = randSelect(data.advice.message1.length);
+  let indexAdvice2 = randSelect(data.advice.message2.length);
+
+  let zodiac = data.horoscope[indexHoroscope];
+  let fortune = data.todayFortune[indexFortune];
+  let advice = `${data.advice.message1[indexAdvice1]} ${data.advice.message2[indexAdvice2]}`;
+
+  printForcast({ zodiac, fortune, advice });
+}
+
+
+dailyForcast();
