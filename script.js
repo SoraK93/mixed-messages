@@ -26,3 +26,8 @@ const data = {
   },
 };
 
+function randSelect(num) {
+  return Math.floor(Math.random() * num);
+}
+
+
