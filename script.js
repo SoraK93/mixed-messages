@@ -14,12 +14,7 @@ const data = {
     "Scorpio",
     "Pisces",
   ],
-  todayFortune: [
-    "Very Lucky",
-    "Slightly Lucky",
-    "Unlucky",
-    "Very Unlucky",
-  ],
+  todayFortune: ["Very Lucky", "Slightly Lucky", "Unlucky", "Very Unlucky"],
   advice: {
     message1: ["get", "eat", "make", "give"],
     message2: ["tea", "noodles", "paper", "water", "rice"],
@@ -30,4 +25,8 @@ function randSelect(num) {
   return Math.floor(Math.random() * num);
 }
 
-
+function printForcast({ zodiac, fortune, advice }) {
+  console.log(`Zodiac sign: ${zodiac}`);
+  console.log(`You are ${fortune}`);
+  console.log(`You need to ${advice}`);
+}
